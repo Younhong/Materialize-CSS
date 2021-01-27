@@ -195,6 +195,91 @@
             </div>
         </nav>
 
+        <br><br>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>  
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul id="mobile-demo" class="sidenav">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">About</a></li>
+                    <li><a href="#!">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Collections list</h1>
+            <ul class="collection">
+                <li class="collection-item">Item 1</li>
+                <li class="collection-item">Item 2</li>
+                <li class="collection-item">Item 3</li>
+                <li class="collection-item">Item 4</li>
+            </ul>
+
+            <div class="collection">
+                <a href="#" class="collection-item">Link 1</a>
+                <a href="#" class="collection-item">Link 2</a>
+                <a href="#" class="collection-item">Link 3</a>
+                <a href="#" class="collection-item">Link 4</a>
+            </div>
+
+            <ul class="collection with-header">
+                <li class="collection-item"><h4>Header</h4></li>
+                <li class="collection-item">Item 1</li>
+                <li class="collection-item">Item 2</li>
+                <li class="collection-item">Item 3</li>
+            </ul>
+
+            <h1>Icon Collection</h1>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>
+                    <span class="title">Title</span>
+                    <p>First Line
+                        <br> Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle green">insert_chart</i>
+                    <span class="title">Title</span>
+                    <p>First Line
+                        <br> Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle red">play_arrow</i>
+                    <span class="title">Title</span>
+                    <p>First Line
+                        <br> Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+            </ul>
+
+            <h1>Pagination</h1>
+            <ul class="pagination">
+                <li class="disabled"><a href=""><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="waves-effect"><a href="#">2</a></li>
+                <li class="waves-effect"><a href="#">3</a></li>
+                <li class="waves-effect"><a href="#">4</a></li>
+                <li class="waves-effect"><a href="#">5</a></li>
+                <li class="waves-effect"><a href="#">6</a></li>
+                <li class="waves-effect"><a href=""><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+
+            <h1>Breadcrumbs</h1>
+        </div>
+
         <div style="height: 500px"></div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -205,13 +290,17 @@
                 var elems = document.querySelectorAll('.fixed-action-btn');
                 var instances = M.FloatingActionButton.init(elems);
 
+                var elems2 = document.querySelectorAll('.sidenav');
+                var instances2 = M.Sidenav.init(elems2, options);
+
                 instance.open();
+                instances2.open();
             });
 
             // Or with jQuery
-
             $(document).ready(function(){
                 $(".dropdown-button").dropdown();
+                $('.sidenav').sidenav();
             });
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
